@@ -61,25 +61,28 @@
             // 
             // txtGamekey
             // 
-            this.txtGamekey.Location = new System.Drawing.Point(6, 234);
+            this.txtGamekey.Location = new System.Drawing.Point(8, 288);
+            this.txtGamekey.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtGamekey.Name = "txtGamekey";
-            this.txtGamekey.Size = new System.Drawing.Size(290, 20);
+            this.txtGamekey.Size = new System.Drawing.Size(385, 22);
             this.txtGamekey.TabIndex = 0;
             this.txtGamekey.Text = "1234";
             // 
             // txtNickName
             // 
-            this.txtNickName.Location = new System.Drawing.Point(7, 274);
+            this.txtNickName.Location = new System.Drawing.Point(9, 337);
+            this.txtNickName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNickName.Name = "txtNickName";
-            this.txtNickName.Size = new System.Drawing.Size(291, 20);
+            this.txtNickName.Size = new System.Drawing.Size(387, 22);
             this.txtNickName.TabIndex = 1;
             this.txtNickName.Text = "nickname";
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(198, 319);
+            this.btnStart.Location = new System.Drawing.Point(264, 393);
+            this.btnStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(104, 20);
+            this.btnStart.Size = new System.Drawing.Size(139, 25);
             this.btnStart.TabIndex = 2;
             this.btnStart.Text = "Iniciar Online!";
             this.btnStart.UseVisualStyleBackColor = true;
@@ -88,27 +91,30 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 218);
+            this.label1.Location = new System.Drawing.Point(5, 268);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 13);
+            this.label1.Size = new System.Drawing.Size(216, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Nombre de la partida (gamekey):";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 258);
+            this.label2.Location = new System.Drawing.Point(7, 318);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 13);
+            this.label2.Size = new System.Drawing.Size(122, 17);
             this.label2.TabIndex = 4;
             this.label2.Text = "Tu nick (Nombre):";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(2, 178);
+            this.label3.Location = new System.Drawing.Point(3, 219);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 13);
+            this.label3.Size = new System.Drawing.Size(140, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "Nombre del servidor:";
             // 
@@ -118,41 +124,46 @@
             this.cmbServer.Items.AddRange(new object[] {
             "mednafen-us.emuparadise.org",
             "mednafen-nl.emuparadise.org",
+            "181.64.117.54",
+            "omednafenbr.duckdns.org",
             "netplay.fobby.net",
             "speedvicio.ddns.net",
             "s1.mednafen-it.org",
             "gs.emu-land.net"});
-            this.cmbServer.Location = new System.Drawing.Point(5, 194);
+            this.cmbServer.Location = new System.Drawing.Point(7, 239);
+            this.cmbServer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbServer.Name = "cmbServer";
-            this.cmbServer.Size = new System.Drawing.Size(293, 21);
+            this.cmbServer.Size = new System.Drawing.Size(389, 24);
             this.cmbServer.TabIndex = 7;
-            this.cmbServer.Text = "mednafen-us.emuparadise.org";
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(-1, 411);
+            this.panel1.Location = new System.Drawing.Point(-1, 506);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(311, 18);
+            this.panel1.Size = new System.Drawing.Size(413, 21);
             this.panel1.TabIndex = 9;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 2);
+            this.label4.Location = new System.Drawing.Point(9, 2);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(292, 13);
+            this.label4.Size = new System.Drawing.Size(386, 17);
             this.label4.TabIndex = 0;
             this.label4.Text = "Launcher by AlexNewbie378 - Jugando CTR Online 2020 :D";
             // 
             // texto11
             // 
             this.texto11.AutoSize = true;
-            this.texto11.Location = new System.Drawing.Point(1, 339);
+            this.texto11.Location = new System.Drawing.Point(1, 417);
+            this.texto11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.texto11.Name = "texto11";
-            this.texto11.Size = new System.Drawing.Size(185, 13);
+            this.texto11.Size = new System.Drawing.Size(245, 17);
             this.texto11.TabIndex = 11;
             this.texto11.Text = "unos 5 a 10 segundos, se paciente c:";
             this.texto11.Visible = false;
@@ -161,9 +172,10 @@
             // texto1
             // 
             this.texto1.AutoSize = true;
-            this.texto1.Location = new System.Drawing.Point(4, 326);
+            this.texto1.Location = new System.Drawing.Point(5, 401);
+            this.texto1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.texto1.Name = "texto1";
-            this.texto1.Size = new System.Drawing.Size(185, 13);
+            this.texto1.Size = new System.Drawing.Size(248, 17);
             this.texto1.TabIndex = 10;
             this.texto1.Text = "Al hacer click por primera vez, tardará";
             this.texto1.Visible = false;
@@ -174,9 +186,10 @@
             this.chkStartCTR.AutoSize = true;
             this.chkStartCTR.Checked = true;
             this.chkStartCTR.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkStartCTR.Location = new System.Drawing.Point(219, 174);
+            this.chkStartCTR.Location = new System.Drawing.Point(292, 214);
+            this.chkStartCTR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkStartCTR.Name = "chkStartCTR";
-            this.chkStartCTR.Size = new System.Drawing.Size(79, 17);
+            this.chkStartCTR.Size = new System.Drawing.Size(99, 21);
             this.chkStartCTR.TabIndex = 12;
             this.chkStartCTR.Text = "Iniciar CTR";
             this.chkStartCTR.UseVisualStyleBackColor = true;
@@ -184,9 +197,10 @@
             // 
             // btnOffline
             // 
-            this.btnOffline.Location = new System.Drawing.Point(198, 298);
+            this.btnOffline.Location = new System.Drawing.Point(264, 367);
+            this.btnOffline.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnOffline.Name = "btnOffline";
-            this.btnOffline.Size = new System.Drawing.Size(104, 20);
+            this.btnOffline.Size = new System.Drawing.Size(139, 25);
             this.btnOffline.TabIndex = 13;
             this.btnOffline.Text = "Iniciar Offline";
             this.btnOffline.UseVisualStyleBackColor = true;
@@ -195,17 +209,19 @@
             // lblOtherJuego
             // 
             this.lblOtherJuego.AutoSize = true;
-            this.lblOtherJuego.Location = new System.Drawing.Point(5, 133);
+            this.lblOtherJuego.Location = new System.Drawing.Point(7, 164);
+            this.lblOtherJuego.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOtherJuego.Name = "lblOtherJuego";
-            this.lblOtherJuego.Size = new System.Drawing.Size(88, 13);
+            this.lblOtherJuego.Size = new System.Drawing.Size(117, 17);
             this.lblOtherJuego.TabIndex = 14;
             this.lblOtherJuego.Text = "Iniciar otro juego:";
             // 
             // btnBuscarJuego
             // 
-            this.btnBuscarJuego.Location = new System.Drawing.Point(223, 149);
+            this.btnBuscarJuego.Location = new System.Drawing.Point(297, 183);
+            this.btnBuscarJuego.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscarJuego.Name = "btnBuscarJuego";
-            this.btnBuscarJuego.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarJuego.Size = new System.Drawing.Size(100, 28);
             this.btnBuscarJuego.TabIndex = 15;
             this.btnBuscarJuego.Text = "Buscar";
             this.btnBuscarJuego.UseVisualStyleBackColor = true;
@@ -214,17 +230,19 @@
             // txtCue
             // 
             this.txtCue.Enabled = false;
-            this.txtCue.Location = new System.Drawing.Point(5, 151);
+            this.txtCue.Location = new System.Drawing.Point(7, 186);
+            this.txtCue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCue.Name = "txtCue";
-            this.txtCue.Size = new System.Drawing.Size(209, 20);
+            this.txtCue.Size = new System.Drawing.Size(277, 22);
             this.txtCue.TabIndex = 16;
             this.txtCue.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnComandos
             // 
-            this.btnComandos.Location = new System.Drawing.Point(3, 298);
+            this.btnComandos.Location = new System.Drawing.Point(4, 367);
+            this.btnComandos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnComandos.Name = "btnComandos";
-            this.btnComandos.Size = new System.Drawing.Size(94, 25);
+            this.btnComandos.Size = new System.Drawing.Size(125, 31);
             this.btnComandos.TabIndex = 17;
             this.btnComandos.Text = "Ver comandos";
             this.btnComandos.UseVisualStyleBackColor = true;
@@ -234,16 +252,18 @@
             // 
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.logo;
             this.pictureBox1.Location = new System.Drawing.Point(1, 1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(314, 129);
+            this.pictureBox1.Size = new System.Drawing.Size(419, 159);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
             // btnChat
             // 
-            this.btnChat.Location = new System.Drawing.Point(103, 299);
+            this.btnChat.Location = new System.Drawing.Point(137, 368);
+            this.btnChat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnChat.Name = "btnChat";
-            this.btnChat.Size = new System.Drawing.Size(85, 24);
+            this.btnChat.Size = new System.Drawing.Size(113, 30);
             this.btnChat.TabIndex = 18;
             this.btnChat.Text = "Launcher Chat";
             this.btnChat.UseVisualStyleBackColor = true;
@@ -252,36 +272,40 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(2, 363);
+            this.label5.Location = new System.Drawing.Point(3, 447);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(177, 13);
+            this.label5.Size = new System.Drawing.Size(236, 17);
             this.label5.TabIndex = 19;
             this.label5.Text = "Cualquier consulta escribenos aqui!:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1, 379);
+            this.label6.Location = new System.Drawing.Point(1, 466);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(161, 13);
+            this.label6.Size = new System.Drawing.Size(218, 17);
             this.label6.TabIndex = 20;
             this.label6.Text = "Grupo para coordinar partidas :D";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(1, 394);
+            this.label7.Location = new System.Drawing.Point(1, 485);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 13);
+            this.label7.Size = new System.Drawing.Size(134, 17);
             this.label7.TabIndex = 21;
             this.label7.Text = "Grupo de discord :3";
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(180, 363);
+            this.linkLabel1.Location = new System.Drawing.Point(240, 447);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(130, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(175, 17);
             this.linkLabel1.TabIndex = 22;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Pagina de FB (Streams :3)";
@@ -290,9 +314,10 @@
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(180, 380);
+            this.linkLabel2.Location = new System.Drawing.Point(240, 468);
+            this.linkLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(107, 13);
+            this.linkLabel2.Size = new System.Drawing.Size(144, 17);
             this.linkLabel2.TabIndex = 23;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Coordinar Partidas :D";
@@ -301,9 +326,10 @@
             // linkLabel3
             // 
             this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(176, 395);
+            this.linkLabel3.Location = new System.Drawing.Point(235, 486);
+            this.linkLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(134, 13);
+            this.linkLabel3.Size = new System.Drawing.Size(176, 17);
             this.linkLabel3.TabIndex = 24;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "Chat de voz y mas weas ;3";
@@ -311,9 +337,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(199, 339);
+            this.button1.Location = new System.Drawing.Point(265, 417);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 21);
+            this.button1.Size = new System.Drawing.Size(135, 26);
             this.button1.TabIndex = 25;
             this.button1.Text = "Configurar Emu";
             this.button1.UseVisualStyleBackColor = true;
@@ -321,9 +348,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(311, 431);
+            this.ClientSize = new System.Drawing.Size(415, 530);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.linkLabel2);
@@ -351,8 +378,9 @@
             this.Controls.Add(this.txtGamekey);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
-            this.Text = "Quick Launcher v2.3";
+            this.Text = "Quick Launcher v2.5";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
