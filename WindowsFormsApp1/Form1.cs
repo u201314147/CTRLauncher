@@ -17,15 +17,61 @@ namespace WindowsFormsApp1
 
     public partial class Form1 : Form
     {
- 
+
 
         public Form1()
         {
-            
+
             InitializeComponent();
             loadpreferences();
+            loadGames();
+            loadServers();
         }
 
+        private void loadServers()
+        {
+
+            try
+            {
+                List<String> lines = new List<string>();
+
+                // Read and show each line from the file.
+                string line = "";
+                using (StreamReader sr = new StreamReader("serverlist.txt"))
+                {
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        lines.Add(line);
+                    }
+
+
+                    foreach (string lin in lines) cmbServer.Items.Add(lin);
+
+
+                }
+
+            }
+            catch(Exception e)
+
+            {
+
+            }
+            }
+        private void loadGames()
+        {
+            string path = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            var directory = System.IO.Path.GetDirectoryName(path);
+
+            try
+            {
+                string[] files = Directory.GetFiles(directory + "\\games\\");
+                foreach (string filePath in files) cmbGames.Items.Add(Path.GetFileName(filePath));
+            }
+            catch(Exception e)
+            {
+
+            }
+        }
         private void btnStart_Click(object sender, EventArgs e)
         {
             string path = System.Reflection.Assembly.GetExecutingAssembly().Location;
@@ -33,7 +79,7 @@ namespace WindowsFormsApp1
 
             string customgame = txtCue.Text;
 
-            string fullPath = directory + "\\games\\" + "CTR - Crash Team Racing (USA).cue";
+            string fullPath = directory + "\\games\\" + cmbGames.Text;
             string server = "\"" + cmbServer.Text + "\"";
             string gamekey = "\"" + txtGamekey.Text+ "\"";
             string nick = "\"" + txtNickName.Text+ "\"";  
@@ -61,15 +107,16 @@ namespace WindowsFormsApp1
            
             try { 
             System.Diagnostics.Process.Start(processtartinfo);
+
+                texto1.Visible = true;
+                texto11.Visible = true;
             }
             catch(Exception g)
             {
-                MessageBox.Show("No se pudo encontrar mednafen.exe :( debes colocar el launcher en la ubicacion del mismo :o");
+                MessageBox.Show("No se pudo iniciar mednafen.exe :(, el launcher no esta en la carpeta raiz de mednafen o debes instalar el parche de 32 bits :0");
            
             }
 
-            texto1.Visible = true;
-            texto11.Visible = true;
 
             savepreferences();
            
@@ -79,7 +126,7 @@ namespace WindowsFormsApp1
         {
             try
             {
-                string[] names = new string[] { cmbServer.Text, txtGamekey.Text, txtNickName.Text, txtCue.Text };
+                string[] names = new string[] { cmbServer.Text, txtGamekey.Text, txtNickName.Text, txtCue.Text , chkStartCTR.Enabled.ToString(), cmbGames.Text };
 
                 using (StreamWriter sw = new StreamWriter("launchercfg.txt"))
                 {
@@ -121,11 +168,27 @@ namespace WindowsFormsApp1
                 txtNickName.Text = lines.ElementAt(2);
                 txtCue.Text = lines.ElementAt(3);
 
+                try
+                {
+                    cmbGames.Text = lines.ElementAt(5);
+
+                }
+                catch(Exception e)
+                {
+
+                }
+                if(lines.ElementAt(4) == "False")
+                chkStartCTR.Checked = false;
+
+                if (lines.ElementAt(4) == "True")
+                    chkStartCTR.Checked = true;
+
             }
             catch (Exception h)
             {
                 MessageBox.Show("No se pudo cargar launchercfg.txt en la ubicacion del launcher, se iniciará configuracion por defecto");
             }
+
 
         }
 
@@ -155,10 +218,10 @@ namespace WindowsFormsApp1
 
         private void chkStartCTR_CheckedChanged(object sender, EventArgs e)
         {
-            if(txtCue.Enabled ==false)
-            txtCue.Enabled = true ;
+            if(chkStartCTR.Checked ==true)
+            txtCue.Enabled = false ;
             else
-                txtCue.Enabled = false;
+                txtCue.Enabled = true;
 
         }
 
@@ -170,7 +233,7 @@ namespace WindowsFormsApp1
 
             string customgame = txtCue.Text;
 
-            string fullPath = directory + "\\games\\" + "CTR - Crash Team Racing (USA).cue";
+            string fullPath = directory + "\\games\\" + cmbGames.Text;
          
 
             ProcessStartInfo processtartinfo = new ProcessStartInfo();
@@ -187,23 +250,27 @@ namespace WindowsFormsApp1
 
             }
             processtartinfo.FileName = directory + "\\" + "mednafen.exe";
+
+
             try
             {
                 System.Diagnostics.Process.Start(processtartinfo);
+                texto1.Visible = true;
+                texto11.Visible = true;
             }
             catch (Exception g)
             {
-                MessageBox.Show("No se pudo iniciar mednafen.exe :( si tu pc es de 32 bits debes extraer el parche de tu carpeta de instalacion, o bien colocar el launcher en la ubicacion del mednafen :o");
+                MessageBox.Show("No se pudo iniciar mednafen.exe :(, el launcher no esta en la carpeta raiz de mednafen o debes instalar el parche de 32 bits :0");
 
             }
 
-            texto1.Visible = true;
-            texto11.Visible = true;
+         
+
 
             savepreferences();
 
-        
-    }
+
+        }
 
         private void btnComandos_Click(object sender, EventArgs e)
         {
@@ -257,6 +324,15 @@ namespace WindowsFormsApp1
 
             processtartinfo.FileName = directory + "\\" + "mednaffe.exe";
             System.Diagnostics.Process.Start(processtartinfo);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+          
+                File.AppendAllText("serverlist.txt", cmbServer.Text);
+
+            cmbServer.Items.Add(cmbServer.Text);
+
         }
     }
 }
