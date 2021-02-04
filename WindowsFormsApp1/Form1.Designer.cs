@@ -54,16 +54,18 @@
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cmbGames = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // txtGamekey
             // 
-            this.txtGamekey.Location = new System.Drawing.Point(8, 431);
+            this.txtGamekey.Location = new System.Drawing.Point(13, 397);
             this.txtGamekey.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtGamekey.Name = "txtGamekey";
             this.txtGamekey.Size = new System.Drawing.Size(433, 26);
@@ -72,7 +74,7 @@
             // 
             // txtNickName
             // 
-            this.txtNickName.Location = new System.Drawing.Point(9, 492);
+            this.txtNickName.Location = new System.Drawing.Point(14, 458);
             this.txtNickName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNickName.Name = "txtNickName";
             this.txtNickName.Size = new System.Drawing.Size(434, 26);
@@ -81,7 +83,7 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(296, 562);
+            this.btnStart.Location = new System.Drawing.Point(301, 528);
             this.btnStart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(156, 31);
@@ -93,7 +95,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 406);
+            this.label1.Location = new System.Drawing.Point(9, 372);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(238, 20);
@@ -103,7 +105,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 468);
+            this.label2.Location = new System.Drawing.Point(11, 434);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(133, 20);
@@ -113,7 +115,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(2, 345);
+            this.label3.Location = new System.Drawing.Point(7, 311);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(153, 20);
@@ -123,7 +125,7 @@
             // cmbServer
             // 
             this.cmbServer.FormattingEnabled = true;
-            this.cmbServer.Location = new System.Drawing.Point(6, 369);
+            this.cmbServer.Location = new System.Drawing.Point(11, 335);
             this.cmbServer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbServer.Name = "cmbServer";
             this.cmbServer.Size = new System.Drawing.Size(405, 28);
@@ -133,7 +135,7 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(-3, 703);
+            this.panel1.Location = new System.Drawing.Point(2, 669);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(464, 26);
@@ -143,17 +145,17 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 3);
+            this.label4.Location = new System.Drawing.Point(0, 2);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(429, 20);
+            this.label4.Size = new System.Drawing.Size(443, 20);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Launcher by AlexNewbie378 - Jugando CTR Online 2021 :D";
+            this.label4.Text = "Hecho por AlEdu5/AlexNewbie378/Jugando CTR Online 2021";
             // 
             // texto11
             // 
             this.texto11.AutoSize = true;
-            this.texto11.Location = new System.Drawing.Point(0, 592);
+            this.texto11.Location = new System.Drawing.Point(5, 558);
             this.texto11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.texto11.Name = "texto11";
             this.texto11.Size = new System.Drawing.Size(272, 20);
@@ -165,7 +167,7 @@
             // texto1
             // 
             this.texto1.AutoSize = true;
-            this.texto1.Location = new System.Drawing.Point(4, 572);
+            this.texto1.Location = new System.Drawing.Point(9, 538);
             this.texto1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.texto1.Name = "texto1";
             this.texto1.Size = new System.Drawing.Size(272, 20);
@@ -177,7 +179,7 @@
             // chkStartCTR
             // 
             this.chkStartCTR.AutoSize = true;
-            this.chkStartCTR.Location = new System.Drawing.Point(8, 268);
+            this.chkStartCTR.Location = new System.Drawing.Point(13, 234);
             this.chkStartCTR.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkStartCTR.Name = "chkStartCTR";
             this.chkStartCTR.Size = new System.Drawing.Size(218, 24);
@@ -188,7 +190,7 @@
             // 
             // btnOffline
             // 
-            this.btnOffline.Location = new System.Drawing.Point(296, 529);
+            this.btnOffline.Location = new System.Drawing.Point(301, 495);
             this.btnOffline.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnOffline.Name = "btnOffline";
             this.btnOffline.Size = new System.Drawing.Size(156, 31);
@@ -200,7 +202,7 @@
             // lblOtherJuego
             // 
             this.lblOtherJuego.AutoSize = true;
-            this.lblOtherJuego.Location = new System.Drawing.Point(8, 205);
+            this.lblOtherJuego.Location = new System.Drawing.Point(13, 171);
             this.lblOtherJuego.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOtherJuego.Name = "lblOtherJuego";
             this.lblOtherJuego.Size = new System.Drawing.Size(130, 20);
@@ -209,7 +211,7 @@
             // 
             // btnBuscarJuego
             // 
-            this.btnBuscarJuego.Location = new System.Drawing.Point(334, 229);
+            this.btnBuscarJuego.Location = new System.Drawing.Point(339, 195);
             this.btnBuscarJuego.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBuscarJuego.Name = "btnBuscarJuego";
             this.btnBuscarJuego.Size = new System.Drawing.Size(112, 35);
@@ -221,7 +223,7 @@
             // txtCue
             // 
             this.txtCue.Enabled = false;
-            this.txtCue.Location = new System.Drawing.Point(8, 232);
+            this.txtCue.Location = new System.Drawing.Point(13, 198);
             this.txtCue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCue.Name = "txtCue";
             this.txtCue.Size = new System.Drawing.Size(312, 26);
@@ -230,7 +232,7 @@
             // 
             // btnComandos
             // 
-            this.btnComandos.Location = new System.Drawing.Point(3, 529);
+            this.btnComandos.Location = new System.Drawing.Point(8, 495);
             this.btnComandos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnComandos.Name = "btnComandos";
             this.btnComandos.Size = new System.Drawing.Size(141, 38);
@@ -241,19 +243,19 @@
             // 
             // btnChat
             // 
-            this.btnChat.Location = new System.Drawing.Point(153, 531);
+            this.btnChat.Location = new System.Drawing.Point(158, 497);
             this.btnChat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnChat.Name = "btnChat";
             this.btnChat.Size = new System.Drawing.Size(128, 37);
             this.btnChat.TabIndex = 18;
-            this.btnChat.Text = "Launcher Chat";
+            this.btnChat.Text = "Chat Opcional";
             this.btnChat.UseVisualStyleBackColor = true;
             this.btnChat.Click += new System.EventHandler(this.btnChat_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(2, 629);
+            this.label5.Location = new System.Drawing.Point(7, 595);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(263, 20);
@@ -263,7 +265,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(0, 654);
+            this.label6.Location = new System.Drawing.Point(5, 620);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(241, 20);
@@ -273,7 +275,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(0, 677);
+            this.label7.Location = new System.Drawing.Point(5, 643);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(148, 20);
@@ -283,7 +285,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(268, 629);
+            this.linkLabel1.Location = new System.Drawing.Point(273, 595);
             this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(196, 20);
@@ -295,7 +297,7 @@
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(268, 655);
+            this.linkLabel2.Location = new System.Drawing.Point(273, 621);
             this.linkLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(160, 20);
@@ -307,7 +309,7 @@
             // linkLabel3
             // 
             this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(262, 678);
+            this.linkLabel3.Location = new System.Drawing.Point(267, 644);
             this.linkLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(196, 20);
@@ -318,7 +320,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(297, 592);
+            this.button1.Location = new System.Drawing.Point(302, 558);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(152, 32);
@@ -327,22 +329,10 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.newctrlauncher1;
-            this.pictureBox1.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(469, 196);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            // 
             // cmbGames
             // 
             this.cmbGames.FormattingEnabled = true;
-            this.cmbGames.Location = new System.Drawing.Point(6, 295);
+            this.cmbGames.Location = new System.Drawing.Point(11, 261);
             this.cmbGames.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbGames.Name = "cmbGames";
             this.cmbGames.Size = new System.Drawing.Size(444, 28);
@@ -350,19 +340,44 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(418, 369);
+            this.button2.Location = new System.Drawing.Point(423, 335);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(34, 28);
+            this.button2.Size = new System.Drawing.Size(34, 34);
             this.button2.TabIndex = 27;
             this.button2.Text = "+";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.bag123;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(217, 157);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.logo;
+            this.pictureBox2.Location = new System.Drawing.Point(219, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(356, 157);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 28;
+            this.pictureBox2.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(466, 735);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(466, 704);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.cmbGames);
             this.Controls.Add(this.button1);
@@ -390,15 +405,17 @@
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.txtNickName);
             this.Controls.Add(this.txtGamekey);
+            this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
-            this.Text = "Quick Launcher v3.0";
+            this.Text = "Quick Launcher v3.2";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -434,6 +451,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox cmbGames;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

@@ -64,8 +64,8 @@ namespace WindowsFormsApp1
 
             try
             {
-                string[] files = Directory.GetFiles(directory + "\\games\\");
-                foreach (string filePath in files) cmbGames.Items.Add(Path.GetFileName(filePath));
+                List<String> files = Directory.GetFiles(directory + "\\games\\").Where(name => !name.EndsWith(".bin",StringComparison.OrdinalIgnoreCase)).ToList();
+                foreach (String filePath in files) cmbGames.Items.Add(Path.GetFileName(filePath));
             }
             catch(Exception e)
             {
@@ -329,7 +329,7 @@ namespace WindowsFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
           
-                File.AppendAllText("serverlist.txt", cmbServer.Text);
+                File.AppendAllText("serverlist.txt", "\n" + cmbServer.Text);
 
             cmbServer.Items.Add(cmbServer.Text);
 
