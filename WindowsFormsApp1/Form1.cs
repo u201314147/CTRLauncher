@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
 using System.IO;
+using System.Threading;
 
 namespace WindowsFormsApp1
 {
@@ -78,24 +79,31 @@ namespace WindowsFormsApp1
             var directory = System.IO.Path.GetDirectoryName(path);
 
             string customgame = txtCue.Text;
-
             string fullPath = directory + "\\games\\" + cmbGames.Text;
             string server = "\"" + cmbServer.Text + "\"";
             string gamekey = "\"" + txtGamekey.Text+ "\"";
             string nick = "\"" + txtNickName.Text+ "\"";  
 
            ProcessStartInfo processtartinfo = new ProcessStartInfo();
+            ProcessStartInfo processtartinfo2 = new ProcessStartInfo();
 
             if (chkStartCTR.Checked == true)
             {   
             processtartinfo.WorkingDirectory = Path.GetDirectoryName(fullPath);
-            processtartinfo.Arguments = "-netplay.gamekey "+ gamekey + " -netplay.host " + server +" -netplay.nick " + nick + " -connect " + "\"" + fullPath;
+                processtartinfo.Arguments = "-netplay.gamekey "+ gamekey + " -netplay.host " + server +" -netplay.nick " + nick + " -connect " + "\"" + fullPath;
             processtartinfo.WindowStyle = ProcessWindowStyle.Hidden;
+
+                processtartinfo2.WorkingDirectory = Path.GetDirectoryName(fullPath);
+                processtartinfo2.Arguments = "-netplay.gamekey " + gamekey + " -netplay.host " + server + " -netplay.nick " + nick + " -connect " + "\"" + fullPath;
+                processtartinfo2.WindowStyle = ProcessWindowStyle.Hidden;
             }
             else
             {
                 processtartinfo.Arguments = "-netplay.gamekey " + gamekey + " -netplay.host " + server + " -netplay.nick " + nick + " -connect " + "\"" + customgame;
                 processtartinfo.WindowStyle = ProcessWindowStyle.Hidden;
+
+                processtartinfo2.Arguments = "-netplay.gamekey " + gamekey + " -netplay.host " + server + " -netplay.nick " + nick + " -connect " + "\"" + customgame;
+                processtartinfo2.WindowStyle = ProcessWindowStyle.Hidden;
 
             }
             //string path = System.Reflection.Assembly.GetExecutingAssembly().Location;
@@ -103,20 +111,34 @@ namespace WindowsFormsApp1
             //To get the location the assembly normally resides on disk or the install directory
 
             processtartinfo.FileName = directory + "\\" + "mednafen.exe";
+            processtartinfo2.FileName = directory + "\\" + "audio\\mednafen.exe";
 
-           
-            try { 
-            System.Diagnostics.Process.Start(processtartinfo);
 
+            try
+            {
+                System.Diagnostics.Process.Start(processtartinfo2);
+               
                 texto1.Visible = true;
                 texto11.Visible = true;
+                Thread.Sleep(1000);
             }
             catch(Exception g)
             {
                 MessageBox.Show("No se pudo iniciar mednafen.exe :(, el launcher no esta en la carpeta raiz de mednafen o debes instalar el parche de 32 bits :0");
            
             }
+            try
+            {
+                System.Diagnostics.Process.Start(processtartinfo);
 
+                texto1.Visible = true;
+                texto11.Visible = true;
+            }
+            catch (Exception g)
+            {
+                MessageBox.Show("No se pudo iniciar mednafen.exe :(, el launcher no esta en la carpeta raiz de mednafen o debes instalar el parche de 32 bits :0");
+
+            }
 
             savepreferences();
            
