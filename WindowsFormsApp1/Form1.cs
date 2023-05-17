@@ -82,9 +82,10 @@ namespace WindowsFormsApp1
             string fullPath = directory + "\\games\\" + cmbGames.Text;
             string server = "\"" + cmbServer.Text + "\"";
             string gamekey = "\"" + txtGamekey.Text+ "\"";
-            string nick = "\"" + txtNickName.Text+ "\"";  
+            string nick = "\"" + txtNickName.Text+ "\"";
+            string nick2 = "\"" + txtNickName.Text + " audio" + "\"";
 
-           ProcessStartInfo processtartinfo = new ProcessStartInfo();
+            ProcessStartInfo processtartinfo = new ProcessStartInfo();
             ProcessStartInfo processtartinfo2 = new ProcessStartInfo();
 
             if (chkStartCTR.Checked == true)
@@ -94,7 +95,7 @@ namespace WindowsFormsApp1
             processtartinfo.WindowStyle = ProcessWindowStyle.Hidden;
 
                 processtartinfo2.WorkingDirectory = Path.GetDirectoryName(fullPath);
-                processtartinfo2.Arguments = "-netplay.gamekey " + gamekey + " -netplay.host " + server + " -netplay.nick " + nick + " -connect " + "\"" + fullPath;
+                processtartinfo2.Arguments = "-netplay.gamekey " + gamekey + " -netplay.host " + server + " -netplay.nick " + nick2 + " -connect " + "\"" + fullPath;
                 processtartinfo2.WindowStyle = ProcessWindowStyle.Hidden;
             }
             else
