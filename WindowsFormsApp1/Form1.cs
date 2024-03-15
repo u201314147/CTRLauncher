@@ -83,18 +83,19 @@ namespace WindowsFormsApp1
             string server = "\"" + cmbServer.Text + "\"";
             string gamekey = "\"" + txtGamekey.Text+ "\"";
             string nick = "\"" + txtNickName.Text+ "\"";  
+            string password = "\"" + txtPassword.Text + "\"";
 
-           ProcessStartInfo processtartinfo = new ProcessStartInfo();
+            ProcessStartInfo processtartinfo = new ProcessStartInfo();
 
             if (chkStartCTR.Checked == true)
             {   
             processtartinfo.WorkingDirectory = Path.GetDirectoryName(fullPath);
-            processtartinfo.Arguments = "-netplay.gamekey "+ gamekey + " -netplay.host " + server +" -netplay.nick " + nick + " -connect " + "\"" + fullPath;
+            processtartinfo.Arguments = "-netplay.gamekey "+ gamekey + " -netplay.host " + server +" -netplay.nick " + nick + " -netplay.password " + password + " -connect " + "\"" + fullPath;
             processtartinfo.WindowStyle = ProcessWindowStyle.Hidden;
             }
             else
             {
-                processtartinfo.Arguments = "-netplay.gamekey " + gamekey + " -netplay.host " + server + " -netplay.nick " + nick + " -connect " + "\"" + customgame;
+                processtartinfo.Arguments = "-netplay.gamekey " + gamekey + " -netplay.host " + server + " -netplay.nick " + nick + " -netplay.password " + password + " -connect " + "\"" + customgame;
                 processtartinfo.WindowStyle = ProcessWindowStyle.Hidden;
 
             }
@@ -126,9 +127,9 @@ namespace WindowsFormsApp1
         {
             try
             {
-                string[] names = new string[] { cmbServer.Text, txtGamekey.Text, txtNickName.Text, txtCue.Text , chkStartCTR.Enabled.ToString(), cmbGames.Text };
+                string[] names = new string[] { cmbServer.Text, txtGamekey.Text, txtNickName.Text, txtCue.Text , chkStartCTR.Enabled.ToString(), cmbGames.Text, txtPassword.Text, };
 
-                using (StreamWriter sw = new StreamWriter("launchercfg.txt"))
+                using (StreamWriter sw = new StreamWriter("launchercfgnew.txt"))
                 {
 
                     foreach (string s in names)
@@ -141,7 +142,7 @@ namespace WindowsFormsApp1
             }
             catch (Exception h)
             {
-                MessageBox.Show("No se pudo guardar preferencias, verifique el archivo launchercfg.txt en la ubicacion del launcher" + h.ToString());
+                MessageBox.Show("No se pudo guardar preferencias, verifique el archivo launchercfgnew.txt en la ubicacion del launcher" + h.ToString());
             }
 
         }
@@ -154,7 +155,7 @@ namespace WindowsFormsApp1
 
                 // Read and show each line from the file.
                 string line = "";
-                using (StreamReader sr = new StreamReader("launchercfg.txt"))
+                using (StreamReader sr = new StreamReader("launchercfgnew.txt"))
                 {
                     while ((line = sr.ReadLine()) != null)
                     {
@@ -167,6 +168,7 @@ namespace WindowsFormsApp1
                 txtGamekey.Text = lines.ElementAt(1);
                 txtNickName.Text = lines.ElementAt(2);
                 txtCue.Text = lines.ElementAt(3);
+                txtPassword.Text = lines.ElementAt(6);
 
                 try
                 {
@@ -186,7 +188,7 @@ namespace WindowsFormsApp1
             }
             catch (Exception h)
             {
-                MessageBox.Show("No se pudo cargar launchercfg.txt en la ubicacion del launcher, se iniciará configuracion por defecto");
+                MessageBox.Show("No se pudo cargar launchercfgnew.txt en la ubicacion del launcher, se iniciará configuracion por defecto");
             }
 
 
@@ -332,6 +334,11 @@ namespace WindowsFormsApp1
                 File.AppendAllText("serverlist.txt", "\n" + cmbServer.Text);
 
             cmbServer.Items.Add(cmbServer.Text);
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
 
         }
     }
